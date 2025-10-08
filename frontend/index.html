@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <link real="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/nmp/toastify-js/src/toastify.main.css" />
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -15,11 +15,13 @@
    <link rel="stylesheet" href="./styles/output.css" />
    <link rel="stylesheet" href="./styles/style.css" />
 
-    <title>Dev pizza - a melhor pizzaria dev</title>
-</head>
-<body>
-    
-    
+   <title>Dev pizza - a melhor pizzaria dev</title>
+  </head>
+  
+  
+  
+  <body>
+
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
         <div class="w-full h-full flex flex-col justify-center items-center bg-test">
             <img
@@ -34,17 +36,17 @@
             <span class="text-white font-medium">Rua Dev 260, SÃO PAULO - SP</span>
 
             <div class="bg-emerald-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-                <span class="text-white font-medium">Seg á Dom - 16:00 as 01:00</span>
+              <span class="text-white font-medium">Seg á Dom - 16:00 as 01:00</span>
             </div>
 
-        </div>
-    </header>
-    
+          </div>
+        </header>
+        
   
     <h1 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
       Conheça nosso menu
     </h1>
-
+    
     <h6 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
         PIZZAS SALGADAS
     </h6>
@@ -52,7 +54,7 @@
     
     <div id="menu">
 
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+      <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
 
             
             
@@ -364,7 +366,7 @@
             <div class="w-full">
               <p class="font-bold">OUTRAS REFRIGERANTES 2L</p>  
             </div>
-
+            
             <div class="flex items-center gap-2 justify-between mt-3">
                 <p class="font-bold">R$ 12.00</p>
                 <button 
@@ -396,7 +398,7 @@
                 data-name="SUCOS DEL VALLE"
                 data-price="12.00"
                 > 
-                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
             </div>
 
@@ -408,11 +410,11 @@
             alt="REFRIGERANTES LATA 350ML"
             class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
             />
-
+            
             <div class="w-full">
               <p class="font-bold">REFRIGERANTES LATA 350ML</p>  
             </div>
-
+            
             <div class="flex items-center gap-2 justify-between mt-3">
                 <p class="font-bold">R$ 7.00</p>
                 <button 
@@ -420,7 +422,7 @@
                 data-name="REFRIGERANTES LATA 350ML"
                 data-price="7.00"
                 > 
-                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
             </div>
 
@@ -432,8 +434,8 @@
     </div>
     
     <div 
-      class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
-      id="cart-modal"
+    class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+    id="cart-modal"
     >
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
           <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
@@ -450,21 +452,21 @@
            class="w-full border-2 p-1 rounded my-1"
            />
            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
-
+           
            <div class="flex items-center justify-between mt-5 w-full">
-            <button id="close-modal-bnt" class="bg-rose-700 text-white px-4 py-1 rounded">Fechar</button>
-            <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
-           </div>
+             <button id="close-modal-bnt" class="bg-rose-700 text-white px-4 py-1 rounded">Fechar</button>
+             <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+            </div>
 
-
-        </div>
+            
+          </div>
     </div>
     
 
    
     <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center"> 
         <button 
-           class="flex items-center gap-2 text-white font-bold"
+        class="flex items-center gap-2 text-white font-bold"
            id="cart-btn"
         >
             (<span id="cart-count">0</span>)
@@ -472,13 +474,10 @@
             <i class="fa fa-cart-plus text-lg text-white"></i>
         </button>
     </footer>
-   
     
     
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="script.js"></script>
-
-
+  <script src="script.js"></script>
 </body>
 </html>
