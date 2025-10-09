@@ -6,6 +6,6 @@ const loginForm = document.getElementById("login-form");
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   if (email.value === "Gui" && senha.value === "123") {
-    window.location.href = "./index.html";
+    window.location.href = "./home.html";
   }
 });
