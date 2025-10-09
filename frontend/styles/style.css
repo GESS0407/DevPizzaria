@@ -5,3 +5,6 @@
 body{
     background-color: #f6e7f8;
 }
+header{
+    background: linear-gradient(-60deg, #200807, #C61618);
+}
