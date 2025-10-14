@@ -50,6 +50,7 @@ function addToCart(name, price) {
     });
   }
 
+
   updateCartModel();
 }
 
@@ -86,8 +87,13 @@ function updateCartModel() {
 
     cartItemsContainer.appendChild(cartItemElement);
 
-    cartCouter.innerText = item.quantity;
   });
+
+  const cartReduced = cart.reduce((valueIndex, arrayValue) => {
+    return arrayValue.quantity + valueIndex;
+  }, 0);
+
+  cartCouter.innerText = cartReduced;
 
   cartTotal.textContent = total.toLocaleString("pt-BR", {
     style: "currency",
@@ -176,7 +182,7 @@ checkoutBtn.addEventListener("click", function () {
 function checkRestaurantOpen() {
   const data = new Date();
   const hora = data.getHours();
-  return hora >= 16 && hora < 1;
+  return hora >= 18 && hora < 24;
 }
 
 const spanItem = document.getElementById("date-span");
