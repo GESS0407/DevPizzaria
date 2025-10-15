@@ -26,6 +26,17 @@
 <body>
 
   <header class="w-full h-[420px] bg-cover bg-center">
+    <div class="navBar-container fixed w-full bg-red-500 text-white">
+      <nav class="w-full flex">
+        <a href="#pizza-salgada">Pizza Salgada</a>
+        <a href="#pizza-doce">Pizza Doce</a>
+        <a href="#bebibas">Bebibas</a>
+      </nav>
+      <aside class="aside-container">
+      <button type="button">(icone)</button>
+      <button type="button">(sidebar)</button>
+      </aside>
+    </div>
     <div class="w-full h-full flex flex-col justify-center items-center bg-test">
       <img src="./assets/1.jpg" alt="Logo FullPizzaStack"
         class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
@@ -47,12 +58,12 @@
     Conheça nosso menu
   </h1>
 
-  <h6 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
-    PIZZAS SALGADAS
-  </h6>
-
-
+  
   <div id="menu">
+  <section id="pizza-salgada">
+    <h6 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+      PIZZAS SALGADAS
+    </h6>
 
     <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
 
@@ -60,7 +71,7 @@
 
       <div class="flex gap-2">
         <img src="./assets/th.jpg" alt="PIZZA DE CAMARÃO"
-          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+          class="w-28 h-28  rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
 
         <div>
           <p class="font-bold">PIZZA DE CAMARÃO</p>
@@ -173,8 +184,9 @@
       </div>
 
     </main>
+</section>
 
-
+<section id="pizza-doce">
     <div class="mx-auto max-w-7xl px-2 my-2">
       <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
         PIZZAS DOCES
@@ -261,7 +273,10 @@
       </div>
 
     </div>
+  
+  </section>
 
+  <section id="bebibas">
     <div class="mx-auto max-w-7xl px-2 my-2">
       <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
         BEBIDAS
@@ -346,6 +361,7 @@
 
 
   </div>
+</section>
 
   <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
     <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
