@@ -12,24 +12,30 @@ const addressWarn = document.getElementById("address-warn");
 // declaração de variavel
 const btnSearch = document.getElementById("btn-search");
 const inputSearch = document.getElementById("input-search");
+const dialog = document.getElementById("dialog-Working");
+const btnDialogClose = document.getElementById("btn-dialog-close");
 
 let cart = [];
 
+btnDialogClose.addEventListener("click", () => {
+  dialog.close();
+});
+
 //função que escuta o evento de click
 btnSearch.addEventListener("click", () => {
-  const result =  validInput();
+  const result = validInput();
   inputSearch.style.display = "block";
   if (!result) return;
   console.log(inputSearch.value);
 });
 
-//função de validação 
-function validInput(){
-  let valid; 
+//função de validação
+function validInput() {
+  let valid;
   const inputResult = inputSearch.style.display;
   if (inputResult === "block") {
     valid = true;
-  }else{
+  } else {
     valid = false;
   }
   return valid;
@@ -74,7 +80,6 @@ function addToCart(name, price) {
     });
   }
 
-
   updateCartModel();
 }
 
@@ -110,7 +115,6 @@ function updateCartModel() {
     total += item.price * item.quantity;
 
     cartItemsContainer.appendChild(cartItemElement);
-
   });
 
   const cartReduced = cart.reduce((valueIndex, arrayValue) => {
@@ -163,18 +167,7 @@ addressInput.addEventListener("input", function (event) {
 checkoutBtn.addEventListener("click", function () {
   const isOpen = checkRestaurantOpen();
   if (!isOpen) {
-    Toastify({
-      text: "A pizzaria esta fechada, volte mais tarde!",
-      duration: 3000,
-      close: true,
-      gravity: "top",
-      position: "right",
-      stopOnFocus: true,
-      style: {
-        background: "#ef4444",
-      },
-    }).showToast();
-
+    dialog.showModal();
     return;
   }
 
@@ -216,6 +209,8 @@ if (isOpen) {
   spanItem.classList.remove("bg-red-500");
   spanItem.classList.add("bg-green-600");
 } else {
+  //Abre o modal informando que a loja está fechada
+  dialog.showModal();
   spanItem.classList.remove("bg-green-600");
   spanItem.classList.add("bg-red-500");
 }
