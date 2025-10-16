@@ -9,7 +9,31 @@ const cartCouter = document.getElementById("cart-count");
 const addressInput = document.getElementById("address");
 const addressWarn = document.getElementById("address-warn");
 
+// declaração de variavel
+const btnSearch = document.getElementById("btn-search");
+const inputSearch = document.getElementById("input-search");
+
 let cart = [];
+
+//função que escuta o evento de click
+btnSearch.addEventListener("click", () => {
+  const result =  validInput();
+  inputSearch.style.display = "block";
+  if (!result) return;
+  console.log(inputSearch.value);
+});
+
+//função de validação 
+function validInput(){
+  let valid; 
+  const inputResult = inputSearch.style.display;
+  if (inputResult === "block") {
+    valid = true;
+  }else{
+    valid = false;
+  }
+  return valid;
+}
 
 cartBnt.addEventListener("click", function () {
   cartModal.style.display = "flex";
