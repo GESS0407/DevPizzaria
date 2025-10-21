@@ -14,22 +14,20 @@ const btnSearch = document.getElementById("btn-search");
 const inputSearch = document.getElementById("input-search");
 const dialog = document.getElementById("dialog-Working");
 const btnDialogClose = document.getElementById("btn-dialog-close");
-// const pizzas = document.querySelectorAll(".pizza")
+const produtos = document.querySelectorAll(".produto")
+const ancor = document.querySelectorAll("a");
 
 let cart = [];
 
 
-// menu.style.visibility = "hidden";
-inputSearch.addEventListener("change", (e) => {
+inputSearch.addEventListener("input", (e) => {
+  const filtro = inputSearch.value.toLowerCase();
 
-  if (inputSearch.value.toUpperCase() == "PIZZA") {
-    // pizzas.forEach(val => val.style.visibility = "visible")
-
-
-  } else {
-  }
-
-})
+  produtos.forEach(produto => {
+    const texto = produto.textContent.toLowerCase();
+    produto.style.display = texto.includes(filtro) ? '' : "none";
+  });
+});
 
 
 
@@ -39,23 +37,18 @@ btnDialogClose.addEventListener("click", () => {
 
 //função que escuta o evento de click
 btnSearch.addEventListener("click", () => {
-  const result = validInput();
-  inputSearch.style.display = "block";
-  if (!result) return;
+
+  if (inputSearch.style.display === "none" || inputSearch.style.display === "") {
+    ancor.forEach(a => a.style.display = "none");
+
+    inputSearch.style.display = "block";
+    inputSearch.focus();
+  } else {
+    ancor.forEach(a => a.style.display = "");
+    inputSearch.style.display = "none";
+  }
 
 });
-
-//função de validação
-function validInput() {
-  let valid;
-  const inputResult = inputSearch.style.display;
-  if (inputResult === "block") {
-    valid = true;
-  } else {
-    valid = false;
-  }
-  return valid;
-}
 
 cartBnt.addEventListener("click", function () {
   cartModal.style.display = "flex";
