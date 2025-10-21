@@ -14,8 +14,24 @@ const btnSearch = document.getElementById("btn-search");
 const inputSearch = document.getElementById("input-search");
 const dialog = document.getElementById("dialog-Working");
 const btnDialogClose = document.getElementById("btn-dialog-close");
+// const pizzas = document.querySelectorAll(".pizza")
 
 let cart = [];
+
+
+// menu.style.visibility = "hidden";
+inputSearch.addEventListener("change", (e) => {
+
+  if (inputSearch.value.toUpperCase() == "PIZZA") {
+    // pizzas.forEach(val => val.style.visibility = "visible")
+
+
+  } else {
+  }
+
+})
+
+
 
 btnDialogClose.addEventListener("click", () => {
   dialog.close();
@@ -26,7 +42,7 @@ btnSearch.addEventListener("click", () => {
   const result = validInput();
   inputSearch.style.display = "block";
   if (!result) return;
-  console.log(inputSearch.value);
+
 });
 
 //função de validação

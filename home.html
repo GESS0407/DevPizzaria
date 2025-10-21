@@ -30,7 +30,7 @@
 
     <p>Por favor, retorne mais tarde (18h às 00:00). </p>
     <p>Caso deseje ver nosso cardápio, clique em "Fechar"</p>
-    
+
 
     <button id="btn-dialog-close" type="button">Fechar</button>
   </dialog>
@@ -41,20 +41,20 @@
         <a href="#pizza-salgada">Pizza Salgada</a>
         <a href="#pizza-doce">Pizza Doce</a>
         <a href="#bebibas">Bebibas</a>
-        
-              <aside class="aside-container"> 
-                <span>
-                  <input id="input-search" type="text">
-                </span>
-               
-                <button id="btn-search" type="button">
-                <img src="./assets/Icons/searchIcon.png" alt="Icone de busca" width="30x" height="30x">
-                </button>
-                
-                <button id="btn-sidebar" type="button">
-                  <img src="./assets/Icons/navIcon.png" alt="Icone de navbar" width="46x" height="46x">
-                 </button>
-              </aside>
+
+        <aside class="aside-container">
+          <span>
+            <input id="input-search" type="text">
+          </span>
+
+          <button id="btn-search" type="button">
+            <img src="./assets/Icons/searchIcon.png" alt="Icone de busca" width="30x" height="30x">
+          </button>
+
+          <button id="btn-sidebar" type="button">
+            <img src="./assets/Icons/navIcon.png" alt="Icone de navbar" width="46x" height="46x">
+          </button>
+        </aside>
       </nav>
 
     </div>
@@ -81,7 +81,9 @@
 
 
   <div id="menu">
-    <section class="section-pizza-salgada" id="pizza-salgada">
+    <!-- Elemento criado para ser o header das pizzas (Salgada, doce e bebidas) -->
+    <span class="spanHeader" id="pizza-salgada">SpanHeader</span>
+    <section class="section-pizza-salgada">
       <h6 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
         PIZZAS SALGADAS
       </h6>
@@ -89,128 +91,145 @@
       <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
 
 
+        <div class="pizza">
+          <div class="flex gap-2">
+            <img src="./assets/th.jpg" alt="PIZZA DE CAMARÃO"
+              class="w-28 h-28  rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
 
-        <div class="flex gap-2">
-          <img src="./assets/th.jpg" alt="PIZZA DE CAMARÃO"
-            class="w-28 h-28  rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+            <div>
+              <p class="font-bold">PIZZA DE CAMARÃO</p>
+              <p class="text-sm">Para muitos não pode faltar! É feita com molho de tomate, muçarela, camarão, queijo
+                parmesão e manjericão.</p>
+            </div>
 
-          <div>
-            <p class="font-bold">PIZZA DE CAMARÃO</p>
-            <p class="text-sm">Para muitos não pode faltar! É feita com molho de tomate, muçarela, camarão, queijo
-              parmesão e manjericão.</p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold">R$ 59.99</p>
+              <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA DE CAMARÃO" data-price="59.99">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+
           </div>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold">R$ 59.99</p>
-            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA DE CAMARÃO" data-price="59.99">
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
         </div>
 
-        <div class="flex gap-2">
-          <img src="./assets/th (1).jpg" alt="PIZZA DE CALABREZA"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+        <div class="pizza">
+          <div class="flex gap-2">
+            <img src="./assets/th (1).jpg" alt="PIZZA DE CALABREZA"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
 
-          <div>
-            <p class="font-bold">PIZZA DE CALABREZA</p>
-            <p class="text-sm">O recheio é preparado com queijo, molho de tomate, calabresa em rodelas, cebola, tomate
-              picado, azeite e orégano.</p>
+            <div>
+              <p class="font-bold">PIZZA DE CALABREZA</p>
+              <p class="text-sm">O recheio é preparado com queijo, molho de tomate, calabresa em rodelas, cebola, tomate
+                picado, azeite e orégano.</p>
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold">R$ 44.99</p>
+              <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA DE CALABREZA"
+                data-price="44.99">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+
           </div>
+        </div>
+        <div class="pizza">
+          <div class="flex gap-2">
+            <img src="./assets/th (2).jpg" alt="PIZZA PORTUGUESA"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
 
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold">R$ 44.99</p>
-            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA DE CALABREZA" data-price="44.99">
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
+            <div>
+              <p class="font-bold">PIZZA PORTUGUESA</p>
+              <p class="text-sm">É feita com queijo, azeitona verde ou preta, ovo cozido, presunto cozido, cebola,
+                ervilha,
+                molho de tomate e azeite.</p>
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold">R$ 49.99</p>
+              <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA PORTUGUESA" data-price="49.99">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+
           </div>
-
         </div>
 
-        <div class="flex gap-2">
-          <img src="./assets/th (2).jpg" alt="PIZZA PORTUGUESA"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+        <div class="pizza">
+          <div class="flex gap-2">
+            <img src="./assets/th (3).jpg" alt="PIZZA DE MUÇARELA"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
 
-          <div>
-            <p class="font-bold">PIZZA PORTUGUESA</p>
-            <p class="text-sm">É feita com queijo, azeitona verde ou preta, ovo cozido, presunto cozido, cebola,
-              ervilha,
-              molho de tomate e azeite.</p>
+            <div>
+              <p class="font-bold">PIZZA DE MUÇARELA</p>
+              <p class="text-sm">Esse sabor leva nada mais nada menos que o queijo muçarela em abundância, molho de
+                tomate
+                fresco, azeitona, rodelas de tomate e orégano!</p>
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold">R$ 44.99</p>
+              <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA DE MUÇARELA" data-price="44.99">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+
           </div>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold">R$ 49.99</p>
-            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA PORTUGUESA" data-price="49.99">
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
         </div>
 
-        <div class="flex gap-2">
-          <img src="./assets/th (3).jpg" alt="PIZZA DE MUÇARELA"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+        <div class="pizza">
+          <div class="flex gap-2">
+            <img src="./assets/th (4).jpg" alt="PIZZA DE MARGUERITA"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
 
-          <div>
-            <p class="font-bold">PIZZA DE MUÇARELA</p>
-            <p class="text-sm">Esse sabor leva nada mais nada menos que o queijo muçarela em abundância, molho de tomate
-              fresco, azeitona, rodelas de tomate e orégano!</p>
+            <div>
+              <p class="font-bold">PIZZA DE MARGUERITA</p>
+              <p class="text-sm">É preparada com molho de tomate, manjericão, rodelas de tomate fresco, azeitona, queijo
+                muçarela e orégano salpicado.</p>
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold">R$ 49.99</p>
+              <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA DE MARGUERITA"
+                data-price="49.99">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+
           </div>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold">R$ 44.99</p>
-            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA DE MUÇARELA" data-price="44.99">
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
         </div>
 
-        <div class="flex gap-2">
-          <img src="./assets/th (4).jpg" alt="PIZZA DE MARGUERITA"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+        <div class="pizza">
 
-          <div>
-            <p class="font-bold">PIZZA DE MARGUERITA</p>
-            <p class="text-sm">É preparada com molho de tomate, manjericão, rodelas de tomate fresco, azeitona, queijo
-              muçarela e orégano salpicado.</p>
+          <div class="flex gap-2">
+            <img src="./assets/th (5).jpg" alt="PIZZA DE PÃO DE ALHO"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+            <div>
+              <p class="font-bold">PIZZA DE PÃO DE ALHO</p>
+              <p class="text-sm">Como o próprio nome já diz, a pizza é formada por alho, requeijão, queijo e salsinha.
+                Deve
+                ser uma delícia, né?</p>
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold">R$ 59.99</p>
+              <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA DE PÃO DE ALHO"
+                data-price="59.99">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+
           </div>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold">R$ 49.99</p>
-            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA DE MARGUERITA" data-price="49.99">
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
-        </div>
-
-        <div class="flex gap-2">
-          <img src="./assets/th (5).jpg" alt="PIZZA DE PÃO DE ALHO"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-
-          <div>
-            <p class="font-bold">PIZZA DE PÃO DE ALHO</p>
-            <p class="text-sm">Como o próprio nome já diz, a pizza é formada por alho, requeijão, queijo e salsinha.
-              Deve
-              ser uma delícia, né?</p>
-          </div>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold">R$ 59.99</p>
-            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="PIZZA DE PÃO DE ALHO"
-              data-price="59.99">
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
         </div>
 
       </main>
     </section>
 
-    <section id="pizza-doce">
+    <!-- Elemento criado para ser o header das pizzas (Salgada, doce e bebidas) -->
+    <span class="spanHeader" id="pizza-doce">SpanHeader</span>
+
+    <section>
       <div class="mx-auto max-w-7xl px-2 my-2">
         <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
           PIZZAS DOCES
@@ -226,7 +245,8 @@
 
           <div>
             <p class="font-bold">PIZZA DE BRIGADEIRO</p>
-            <p class="text-sm">Um clássico de origem brasileira, o brigadeiro é uma das pizzas mais pedidas e populares.
+            <p class="text-sm">Um clássico de origem brasileira, o brigadeiro é uma das pizzas mais pedidas e
+              populares.
               Nem preciso dizer sobre a sua preparação, né?</p>
           </div>
 
@@ -302,6 +322,8 @@
       </div>
 
     </section>
+    <!-- Elemento criado para ser o header das pizzas (Salgada, doce e bebidas) -->
+    <span class="spanHeader" id="bebibas">SpanHeader</span>
 
     <section id="bebibas">
       <div class="mx-auto max-w-7xl px-2 my-2">
